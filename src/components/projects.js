@@ -23,6 +23,7 @@ export const Projects = (props) => {
 									card's content.
 								</CardText>
 								<Button className="buttons">View</Button>
+								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
 					</Col>
@@ -37,6 +38,7 @@ export const Projects = (props) => {
 									card's content.
 								</CardText>
 								<Button className="buttons">View</Button>
+								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
 					</Col>
@@ -55,6 +57,7 @@ export const Projects = (props) => {
 										View
 									</a>
 								</Button>
+								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
 					</Col>
