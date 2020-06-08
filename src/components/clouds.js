@@ -5,6 +5,10 @@ import htmlicon from '../assets/html5.svg';
 import booticon from '../assets/bootstrap.svg';
 import cssicon from '../assets/css.svg';
 import react from '../assets/reactlogo.word.svg';
+import mongodb from '../assets/mongodb.svg';
+import vuejs from '../assets/vuejs.svg';
+import vuetify from '../assets/vuetify.svg';
+import nodejs from '../assets/nodejs.svg';
 import AOS from 'aos';
 import bird4 from '../assets/bird4.svg';
 import bird5 from '../assets/bird5.svg';
@@ -84,7 +88,7 @@ export default function Clouds() {
 								<h3>Problem Solver</h3>
 							</div>
 							<div>
-								Finding the optimal framework and the right business solution is crucail at every
+								Finding the optimal framework and the right business solution is crucial at every
 								project.
 							</div>
 						</Col>
@@ -116,6 +120,23 @@ export default function Clouds() {
 						<Col>
 							{' '}
 							<img className="stack_icon" src={cssicon} alt="Css icon" />
+						</Col>
+					</Row>
+					<Row className="stack_row">
+						<Col>
+							{' '}
+							<img className="stack_icon" src={mongodb} alt="React logo" />
+						</Col>
+						<Col>
+							{' '}
+							<img className="stack_icon" src={vuetify} alt="Html icon" />
+						</Col>
+						<Col>
+							<img className="stack_icon" src={vuejs} alt="Bootstrap icon" />
+						</Col>
+						<Col>
+							{' '}
+							<img className="stack_icon" src={nodejs} alt="Css icon" />
 						</Col>
 					</Row>
 				</Container>
