@@ -134,12 +134,16 @@
 .profil {
 	display: flex;
 	width: 100%;
+	height:auto;
 	z-index: 0;
 	justify-content: flex-end;
 }
 
 #blackandwhite {
+	display: flex;
 	max-width: 50%;
+	align-self: flex-start;
+	height:auto;
 	z-index: 0;
 	position: relative;
 }
@@ -151,7 +155,7 @@
 	justify-content: flex-start;
 	background-color: black;
 	padding: 2rem;
-	flex: 50% 1;
+	flex: 50%;
 	height: 87vh;
 }
 
@@ -360,8 +364,10 @@ h1 {
 	}
 
 	#blackandwhite {
+		display: flex;
 		margin-top: 45rem;
-		float: right;
+		height:auto;
+		align-self: flex-start;
 	}
 
 	.profil {
