@@ -361,7 +361,6 @@ h1 {
 
 	#blackandwhite {
 		margin-top: 45rem;
-		max-width: 50%;
 		float: right;
 	}
 
@@ -395,6 +394,11 @@ h1 {
 		display: none;
 	}
 
+	.section_title {
+		margin-left: 1rem;
+	
+	}
+
 	.stack_wraper {
 		display: block;
 		width: 20%;
@@ -408,17 +412,42 @@ h1 {
 	}
 	.stack_row {
 		margin-top: 0px;
+		
 	}
+	.stack_icon {
+		max-width: 63.77px;
+	}
+
 	.wrapper_welcome {
-		margin-top: 3rem;
+		margin-top: 4rem;
 	}
 }
+
+
+@media only screen  and (min-width : 1824px) {
+	/* Styles */
+	.first_line {
+		text-align: center;
+		align-self: center;
+		justify-self: center;
+		display: flex;
+		color: white;
+		font-size: 1.6rem;
+		background-color: black;
+		opacity: 0.9;
+		padding: 40px 40px 40px 50px;
+		z-index: 0;
+		height: 20rem;
+		width: 22rem;
+	}
+	
+	}
 
 //Clouds
 
 .clouds {
 	display: flex;
-	height: 160vh;
+	height: 180vh;
 	width: 100%;
 	background-color: black;
 	background-image: url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
@@ -456,3 +485,5 @@ h1 {
 	margin-top: 2rem;
 	margin-bottom: 3rem;
 }
+
+

@@ -51,7 +51,7 @@ export default function footer() {
 					</div>
 				</div>
 				<div className="allRights">
-					<p>ALL Rights Reserved @Bridgetlandia 2020</p>
+					<p>ALL Rights Reserved @BridgetLandia 2020</p>
 				</div>
 			</div>
 		</section>

@@ -26,7 +26,7 @@ export default function Clouds() {
 		<section>
 			<div className="clouds">
 				<Container className="skills">
-					<Row>
+					<Row className="section_title">
 						<h3
 							ref={(ref) => {
 								setRef(ref);
@@ -93,7 +93,7 @@ export default function Clouds() {
 							</div>
 						</Col>
 					</Row>
-					<Row>
+					<Row className="section_title">
 						<h3
 							ref={(ref) => {
 								setRef(ref);
