@@ -91,7 +91,7 @@ export const Projects = (props) => {
 								<CardTitle>Knit and Bake</CardTitle>
 								<CardSubtitle>Small business website made with React</CardSubtitle>
 								<CardText>
-									Small nusiness website with a shop section.
+									Small business website with a shop section.
 								</CardText>
 								<Button className="buttons">
 									<a className="project_links" href="https://sutimama-kotodeje.herokuapp.com/" target="_blank" rel="noopener noreferrer">
