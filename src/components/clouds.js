@@ -52,8 +52,8 @@ export default function Clouds() {
 								<h3>User Friendly</h3>
 							</div>
 							<div>
-								Software is for Users therefore following intuitive design patterns and making easily
-								understandable UI elements is especially important to me.
+								I always try to follow intuitive design patterns and make easily
+								understandable UI elements for the perfect UX experience.
 							</div>
 						</Col>
 						<Col sm="4" className="skill-box">
@@ -71,7 +71,7 @@ export default function Clouds() {
 							</div>
 							<div>
 								I like to experiment with colors, shapes and movements. Tweeking litte details is a good
-								way to engage your audience and to make browsing an adventure.
+								way to engage your audience and make browsing an adventure.
 							</div>
 						</Col>
 						<Col sm="4" className="skill-box">
@@ -88,7 +88,7 @@ export default function Clouds() {
 								<h3>Problem Solver</h3>
 							</div>
 							<div>
-								Finding the optimal framework and the right business solution is crucial at every
+								Finding the right business solution and the optimal framework is crucial for me in every
 								project.
 							</div>
 						</Col>

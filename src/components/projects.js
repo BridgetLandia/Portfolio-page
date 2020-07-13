@@ -2,7 +2,11 @@ import React from 'react';
 import expensify from '../assets/expensify.png';
 import restaurant from '../assets/restaurant-app.png';
 import sutimama from '../assets/sutimama.png'
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col } from 'reactstrap';
+import quiz from '../assets/quiz.jpg'
+import { CardDeck, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Row, Col } from 'reactstrap';
+
+
+
 
 export const Projects = (props) => {
 	return (
@@ -13,12 +17,12 @@ export const Projects = (props) => {
 						<h1>My projects</h1>
 					</div>
 				</Row>
-				<Row>
-					<Col md="4">
+				<Row className="projects_row">
+					<CardDeck>
 						<Card className="projects">
 							<CardImg top width="100%" />
 							<CardBody>
-								<CardTitle>Trello Clone</CardTitle>
+								<CardTitle className="project_title">Trello Clone</CardTitle>
 								<CardSubtitle>Made with React Hooks</CardSubtitle>
 								<CardText>
 									Some quick example text to build on the card title and make up the bulk of the
@@ -28,12 +32,10 @@ export const Projects = (props) => {
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
-					<Col md="4">
 						<Card className="projects">
 							<CardImg top width="100%" src={restaurant}/>
 							<CardBody>
-								<CardTitle>Restaurant App</CardTitle>
+								<CardTitle className="project_title">Restaurant App</CardTitle>
 								<CardSubtitle>Made with Vue, Vuex, Firebase</CardSubtitle>
 								<CardText>
 									Stylish restaurant app for smaller businesses with
@@ -47,12 +49,10 @@ export const Projects = (props) => {
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
-					<Col md="4">
 						<Card className="projects">
 							<CardImg top width="100%" src={expensify} />
 							<CardBody>
-								<CardTitle>Expensify App</CardTitle>
+								<CardTitle className="project_title">Expensify App</CardTitle>
 								<CardSubtitle>React Redux</CardSubtitle>
 								<CardText>
 									Some quick example text to build on the card title and make up the bulk of the
@@ -66,14 +66,14 @@ export const Projects = (props) => {
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
+					</CardDeck>
 				</Row>
-				<Row>
-					<Col md="4">
+				<Row className="projects_row">
+					<CardDeck>
 						<Card className="projects">
 							<CardImg top width="100%" />
 							<CardBody>
-								<CardTitle>Trello Clone</CardTitle>
+								<CardTitle className="project_title">Trello Clone</CardTitle>
 								<CardSubtitle>Made with React Hooks</CardSubtitle>
 								<CardText>
 									Some quick example text to build on the card title and make up the bulk of the
@@ -83,12 +83,10 @@ export const Projects = (props) => {
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
-					<Col md="4">
 						<Card className="projects">
 							<CardImg top width="100%" src={sutimama} />
 							<CardBody>
-								<CardTitle>Knit and Bake</CardTitle>
+								<CardTitle className="project_title">Knit and Bake</CardTitle>
 								<CardSubtitle>Small business website made with React</CardSubtitle>
 								<CardText>
 									Small business website with a shop section.
@@ -101,26 +99,24 @@ export const Projects = (props) => {
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
-					<Col md="4">
 						<Card className="projects">
-							<CardImg top width="100%" src={expensify} />
+							<CardImg top width="100%" src={quiz} />
 							<CardBody>
-								<CardTitle>Expensify App</CardTitle>
-								<CardSubtitle>React Redux</CardSubtitle>
+								<CardTitle className="project_title">Quiz App</CardTitle>
+								<CardSubtitle>Made with React hooks and TypeScript</CardSubtitle>
 								<CardText>
-									Some quick example text to build on the card title and make up the bulk of the
-									card's content.
+									Sleek Quiz App with category and difficulty level picker
+									and accomplishment review.
 								</CardText>
 								<Button className="buttons">
-									<a href="https://elso-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+									<a className="project_links" href="https://the-great-quiz.netlify.app" target="_blank" rel="noopener noreferrer">
 										View
 									</a>
 								</Button>
 								<Button className="buttons">GitHub</Button>
 							</CardBody>
 						</Card>
-					</Col>
+					</CardDeck>
 				</Row>
 			</Container>
 		</div>

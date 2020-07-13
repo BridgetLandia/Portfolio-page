@@ -47,8 +47,7 @@ export default function Welcome() {
 								}}
 								data-aos="fade-right"
 							>
-								I am Brigitta, a self-taught web developer and wannabe UI und UX designer. Take a look
-								at my projects.
+								I am Brigitta, a self-taught web developer, UI und UX designer. Take a look at my projects!
 							</p>
 						</div>
 						<Link to="projects_container" smooth={true} offset={-100} duration={500}>

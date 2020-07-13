@@ -210,31 +210,7 @@ h2 {
 	width: 100px;
 }
 
-// Skills section
 
-.skills {
-	height: 100%;
-	color: #d79abc;
-}
-
-.stack_wraper {
-	display: flex;
-	height: 200px;
-}
-
-h3 {
-	color: whitesmoke;
-	padding-bottom: 1rem;
-}
-
-.stack_icon {
-	max-width: 100px;
-}
-
-.skill_icon {
-	max-width: 60px;
-	margin-bottom: 0.5rem;
-}
 
 //Projects section
 
@@ -245,8 +221,11 @@ h3 {
 	height: 100%;
 }
 
-.my_projects_title {
-	margin: 2rem;
+.projects_row {
+	margin-bottom: 2rem;
+}
+.project_title {
+	font-weight: 700;
 }
 
 h1 {
@@ -274,6 +253,74 @@ h1 {
     cursor: pointer;
 }
 
+// Skills section
+
+.skills {
+	height: 100%;
+	color: #d79abc;
+}
+
+.stack_wraper {
+	display: flex;
+	height: 200px;
+}
+
+h3 {
+	color: whitesmoke;
+	padding-bottom: 1rem;
+}
+
+.stack_icon {
+	max-width: 100px;
+}
+
+.skill_icon {
+	max-width: 60px;
+	margin-bottom: 0.5rem;
+}
+//Clouds (Stacks)
+
+.clouds {
+	display: flex;
+	height: 180vh;
+	width: 100%;
+	background-color: black;
+	background-image: url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+	background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+	animation: 250s para infinite linear;
+	transform: rotate(0.02deg);
+}
+
+@keyframes para {
+	100% {
+		background-position: 500px 50%, 1000px 100%, 400px 0;
+	}
+}
+
+.skill-box {
+	text-align: center;
+}
+
+.stack {
+	font-size: 2rem;
+	text-shadow: yellow;
+	padding-top: 3.2rem;
+	text-align: center;
+	//background: -webkit-linear-gradient(#fffd00, #f737f1);
+	//background: -webkit-linear-gradient(#b700ff, rgb(140, 213, 216));
+	background: -webkit-linear-gradient(#d7bfe0, rgb(231, 247, 6));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.stack_row {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+
 //Footer
 
 .footer {
@@ -291,7 +338,7 @@ h1 {
 }
 
 .contact {
-	height: 62px;
+	height: 52px;
 	padding: 0 40px 0 40px;
 	position: relative;
 	display: block;
@@ -306,7 +353,7 @@ h1 {
 }
 
 .message {
-	min-height: 169px;
+	min-height: 140px;
 	padding: 19px 35px 0 35px;
 	position: relative;
 	display: block;
@@ -401,6 +448,9 @@ h1 {
 		flex: 50% 1;
 		height: 87vh;
 	}
+	.wrapper_welcome {
+		margin-top: 4rem;
+	}
 
 	#welcome_text {
 		width: 100%;
@@ -424,11 +474,14 @@ h1 {
 		height: 100%;
 	}
 
+	.projects_row {
+		margin-bottom: 0rem;
+	}
+
 	.section_title {
 		margin-left: 1rem;
 	
 	}
-
 	.stack_wraper {
 		display: block;
 		width: 20%;
@@ -448,8 +501,20 @@ h1 {
 		max-width: 63.77px;
 	}
 
-	.wrapper_welcome {
-		margin-top: 4rem;
+	
+	.contact {
+		height: 62px;
+	}
+	
+	.message {
+		min-height: 169px;
+		
+	}
+	.icon_wrapper {
+		margin-top:2.5rem;
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
 	}
 }
 
@@ -473,47 +538,5 @@ h1 {
 	
 	}
 
-//Clouds
-
-.clouds {
-	display: flex;
-	height: 180vh;
-	width: 100%;
-	background-color: black;
-	background-image: url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-	background-repeat: repeat-x;
-	background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
-	background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
-	animation: 250s para infinite linear;
-	transform: rotate(0.02deg);
-}
-
-@keyframes para {
-	100% {
-		background-position: 500px 50%, 1000px 100%, 400px 0;
-	}
-}
-
-.skill-box {
-	text-align: center;
-}
-
-.stack {
-	font-size: 2rem;
-	text-shadow: yellow;
-	padding-top: 2rem;
-	text-align: center;
-	//background: -webkit-linear-gradient(#fffd00, #f737f1);
-	//background: -webkit-linear-gradient(#b700ff, rgb(140, 213, 216));
-	background: -webkit-linear-gradient(#d7bfe0, rgb(231, 247, 6));
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.stack_row {
-	margin-top: 2rem;
-	margin-bottom: 3rem;
-}
 
 

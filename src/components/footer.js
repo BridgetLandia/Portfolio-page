@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import useInputState from './useInputState'
 import emailjs from 'emailjs-com';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
 
-export default function footer() {
+function Footer(props) {
+	const {
+		className
+	  } = props;
+	const [ valueName, handleChangeName, resetName ] = useInputState("");
+	const [ valueEmail, handleChangeEmail, resetEmail ] = useInputState("");
+	const [ valueMessage, handleChangeMessage, resetMessage ] = useInputState("");
+	const [modal, setModal] = useState(false);
+	const toggle = () => setModal(!modal);
+
 	function sendEmail(e) {
 		e.preventDefault();
 
@@ -15,7 +26,11 @@ export default function footer() {
 				console.log(error.text);
 			}
 		);
-	}
+		resetName();
+		resetEmail();
+		resetMessage();
+		}
+		
 	return (
 		<section id="contact">
 			<div className="footer">
@@ -23,15 +38,25 @@ export default function footer() {
 					<h2>Contact Info</h2>
 				</div>
 				<form name="contact_form" onSubmit={sendEmail}>
-					<div className="form" onSubmit={sendEmail}>
+					<div className="form">
 						<input type="hidden" name="contact_number" />
-						<input className="contact" type="text" name="user_name" placeholder="Your Name" />
-						<input className="contact" type="text" name="user_email" placeholder="E-mail" />
-						<textarea className="message" type="text" name="message" placeholder="Your Message" />
-						<input className="buttons" id="send_button" type="submit" value="Send" />
+						<input className="contact" type="text" name="user_name" value={valueName} onChange={handleChangeName} placeholder="Your Name" />
+						<input className="contact" type="text" name="user_email" value={valueEmail} onChange={handleChangeEmail} placeholder="E-mail" />
+						<textarea className="message" type="text" name="message" value={valueMessage} onChange={handleChangeMessage} placeholder="Your Message" />
+						<input className="buttons" id="send_button" type="submit" value="Send" onClick={toggle}/>
 					</div>
 				</form>
-				<div className="icon_wrapper">
+				<Modal isOpen={modal} toggle={toggle} className={className}>
+				<ModalHeader toggle={toggle}>Thank you for your Message!</ModalHeader>
+				<ModalBody>
+				  <p>I will contact you as soon as possible.</p>
+				  <p>Have a great day!</p>
+				</ModalBody>
+				<ModalFooter>
+				  <Button className="buttons" onClick={toggle}>Cancel</Button>
+				</ModalFooter>
+			  </Modal>
+			  <div className="icon_wrapper">
 					<a
 						href="https://github.com/BridgetLandia?tab=repositories"
 						target="_blank"
@@ -57,3 +82,5 @@ export default function footer() {
 		</section>
 	);
 }
+
+export default Footer
