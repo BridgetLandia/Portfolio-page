@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstr
 import logo from '../assets/logo.png';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-scroll';
+import resume from '../assets/resume_Brigitta_Toth.pdf';
 
 const Header = (props) => {
 	const [ collapsed, setCollapsed ] = useState(true);
@@ -43,7 +44,7 @@ const Header = (props) => {
 							</NavItem>
 						</Link>
 						<NavItem className="nav-item">
-							<NavLink className="nav-link" href="/components/">
+							<NavLink href={resume} target="_blank" rel="noopener noreferrer" className="nav-link">
 								CV
 							</NavLink>
 						</NavItem>

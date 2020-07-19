@@ -1,7 +1,6 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
-
 //Navbar start
 
 #mainNavbar {
@@ -62,7 +61,7 @@
 	align-self: center;
 	justify-self: center;
 	display: flex;
-	color: white;
+	color: whitesmoke;
 	font-size: 1.4rem;
 	background-color: black;
 	opacity: 0.9;
@@ -86,8 +85,8 @@
 	padding-bottom: 0.5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	z-index:99;
-	position:relative;
+	z-index: 99;
+	position: relative;
 }
 
 .buttons:hover {
@@ -119,12 +118,12 @@
 	offset: 50%;
 	width: 50%;
 	height: 20%;
-	background-color: white;
+	background-color: whitesmoke;
 	will-change: transform;
 	z-index: 2;
 }
 
-#bubble {
+#profile_wrapper {
 	display: flex;
 	position: absolute;
 	align-items: flex-end;
@@ -136,17 +135,17 @@
 .profil {
 	display: flex;
 	width: 100%;
-	height:auto;
+	height: auto;
 	z-index: 0;
 	justify-content: flex-end;
-	margin-right:8rem;
+	margin-right: 8rem;
 }
 
 #blackandwhite {
 	display: flex;
 	max-width: 50%;
 	align-self: flex-start;
-	height:auto;
+	height: auto;
 	z-index: 0;
 	position: relative;
 }
@@ -175,11 +174,12 @@
 	height: 87vh;
 }
 
-#welcome_text {
+.welcome_text {
 	font-size: 1rem;
 	color: white;
 	text-align: left;
 	width: 45%;
+	margin-top: 2rem;
 }
 
 #White {
@@ -203,22 +203,43 @@ h2 {
 	padding-top: 2rem;
 	color: #e7b5d0;
 	text-align: left;
-	width: 28%;
+	width: 30%;
+	font-weight: 700;
 }
 
-#plane {
-	width: 100px;
+.buttons-gif {
+	background: black;
+	border: solid 2px;
+	border-radius: 10px;
+	border-color: white;
+	color: white;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	z-index: 99;
+	position: relative;
 }
 
-
+.buttons-gif:hover {
+	background: #f737f1;
+	color: #fffd00;
+	border-color: #fffd00;
+}
 
 //Projects section
-
+.projects_container_wrapper {
+	background-color: whitesmoke;
+}
 #projects_container {
 	position: relative;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	height: 100%;
+}
+
+.my_projects_title {
+	margin-bottom: 2rem;
 }
 
 .projects_row {
@@ -227,7 +248,21 @@ h2 {
 .project_title {
 	font-weight: 700;
 }
+.project_subtitle {
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+.modal-content {
+	align-items: center;
+}
+.modal_gif {
+	width: 900px;
+}
 
+.project_modal_footer {
+	width: 900px;
+	background: whitesmoke;
+}
 h1 {
 	color: black;
 }
@@ -243,14 +278,19 @@ h1 {
 
 .project_links {
 	text-decoration: none;
-    color: white;
-    cursor: pointer;
+	color: white;
+	cursor: pointer;
 }
 
 .project_links:hover {
 	text-decoration: none;
-    color: #fffd00;
-    cursor: pointer;
+	color: #fffd00;
+	cursor: pointer;
+}
+
+#arrow_img {
+	width: 50px;
+	transform: rotate(-90deg);
 }
 
 // Skills section
@@ -411,6 +451,14 @@ h3 {
 	border-radius: 40%;
 }
 
+.copy_button {
+	color: rgb(231, 247, 6);
+	background: black;
+	cursor: pointer;
+	margin-left: 1rem;
+	text-decoration: underline;
+}
+
 //Media@
 
 @media only screen and (max-width: 768px) {
@@ -427,8 +475,8 @@ h3 {
 
 	#blackandwhite {
 		display: flex;
-		margin-top: 33rem;
-		height:auto;
+		margin-top: 31rem;
+		height: auto;
 		align-self: flex-start;
 	}
 
@@ -439,7 +487,7 @@ h3 {
 		align-self: center;
 		margin-top: 2rem;
 		height: 90vh;
-		margin-right:4rem;
+		margin-right: 4rem;
 	}
 
 	#Welcome {
@@ -452,7 +500,7 @@ h3 {
 		margin-top: 4rem;
 	}
 
-	#welcome_text {
+	.welcome_text {
 		width: 100%;
 	}
 
@@ -474,13 +522,18 @@ h3 {
 		height: 100%;
 	}
 
+	.my_projects_title {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0rem;
+	}
+
 	.projects_row {
 		margin-bottom: 0rem;
 	}
 
 	.section_title {
 		margin-left: 1rem;
-	
 	}
 	.stack_wraper {
 		display: block;
@@ -495,31 +548,47 @@ h3 {
 	}
 	.stack_row {
 		margin-top: 0px;
-		
 	}
 	.stack_icon {
 		max-width: 63.77px;
 	}
 
-	
 	.contact {
 		height: 62px;
 	}
-	
+
 	.message {
 		min-height: 169px;
-		
 	}
 	.icon_wrapper {
-		margin-top:2.5rem;
+		margin-top: 2.5rem;
 		display: flex;
 		justify-content: flex-start;
 		width: 100%;
 	}
+	.copy_button {
+		display: none;
+	}
 }
 
-
-@media only screen  and (min-width : 1824px) {
+@media only screen and (max-width: 1024px) {
+	.projects_row {
+		display: flex;
+		flex-direction: column;
+	}
+	.buttons-gif {
+		display: none;
+	}
+	.projects {
+		padding-bottom: 1rem;
+		margin-top: 3rem;
+		transition: all .2s ease-in-out;
+	}
+	.profil {
+		margin-right: 0rem;
+	}
+}
+@media only screen and (min-width: 1824px) {
 	/* Styles */
 	.first_line {
 		text-align: center;
@@ -535,8 +604,4 @@ h3 {
 		height: 20rem;
 		width: 22rem;
 	}
-	
-	}
-
-
-
+}

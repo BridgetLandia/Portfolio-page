@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import useInputState from './useInputState'
+import useInputState from './useInputState';
 import emailjs from 'emailjs-com';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
 
 function Footer(props) {
-	const {
-		className
-	  } = props;
-	const [ valueName, handleChangeName, resetName ] = useInputState("");
-	const [ valueEmail, handleChangeEmail, resetEmail ] = useInputState("");
-	const [ valueMessage, handleChangeMessage, resetMessage ] = useInputState("");
-	const [modal, setModal] = useState(false);
+	const { className } = props;
+	const [ copySuccess, setCopySuccess ] = useState('');
+	const [ valueName, handleChangeName, resetName ] = useInputState('');
+	const [ valueEmail, handleChangeEmail, resetEmail ] = useInputState('');
+	const [ valueMessage, handleChangeMessage, resetMessage ] = useInputState('');
+	const [ modal, setModal ] = useState(false);
 	const toggle = () => setModal(!modal);
+
+	const copyToClipBoard = async (copyMe) => {
+		try {
+			await navigator.clipboard.writeText(copyMe);
+			setCopySuccess('Copied!');
+		} catch (err) {
+			setCopySuccess('Failed to copy!');
+		}
+	};
 
 	function sendEmail(e) {
 		e.preventDefault();
@@ -29,8 +37,8 @@ function Footer(props) {
 		resetName();
 		resetEmail();
 		resetMessage();
-		}
-		
+	}
+
 	return (
 		<section id="contact">
 			<div className="footer">
@@ -40,23 +48,47 @@ function Footer(props) {
 				<form name="contact_form" onSubmit={sendEmail}>
 					<div className="form">
 						<input type="hidden" name="contact_number" />
-						<input className="contact" type="text" name="user_name" value={valueName} onChange={handleChangeName} placeholder="Your Name" />
-						<input className="contact" type="text" name="user_email" value={valueEmail} onChange={handleChangeEmail} placeholder="E-mail" />
-						<textarea className="message" type="text" name="message" value={valueMessage} onChange={handleChangeMessage} placeholder="Your Message" />
-						<input className="buttons" id="send_button" type="submit" value="Send" onClick={toggle}/>
+						<input
+							className="contact"
+							type="text"
+							name="user_name"
+							value={valueName}
+							onChange={handleChangeName}
+							placeholder="Your Name"
+						/>
+						<input
+							className="contact"
+							type="text"
+							name="user_email"
+							value={valueEmail}
+							onChange={handleChangeEmail}
+							placeholder="Your E-mail"
+						/>
+						<textarea
+							className="message"
+							type="text"
+							name="message"
+							value={valueMessage}
+							onChange={handleChangeMessage}
+							placeholder="Your Message"
+						/>
+						<input className="buttons" id="send_button" type="submit" value="Send" onClick={toggle} />
 					</div>
 				</form>
 				<Modal isOpen={modal} toggle={toggle} className={className}>
-				<ModalHeader toggle={toggle}>Thank you for your Message!</ModalHeader>
-				<ModalBody>
-				  <p>I will contact you as soon as possible.</p>
-				  <p>Have a great day!</p>
-				</ModalBody>
-				<ModalFooter>
-				  <Button className="buttons" onClick={toggle}>Cancel</Button>
-				</ModalFooter>
-			  </Modal>
-			  <div className="icon_wrapper">
+					<ModalHeader toggle={toggle}>Thank you for your Message!</ModalHeader>
+					<ModalBody>
+						<p>I will contact you as soon as possible.</p>
+						<p>Have a great day!</p>
+					</ModalBody>
+					<ModalFooter>
+						<Button className="buttons" onClick={toggle}>
+							Cancel
+						</Button>
+					</ModalFooter>
+				</Modal>
+
+				<div className="icon_wrapper">
 					<a
 						href="https://github.com/BridgetLandia?tab=repositories"
 						target="_blank"
@@ -74,6 +106,10 @@ function Footer(props) {
 					<div>
 						<p>Email: bridgetlandia@gmail.com</p>
 					</div>
+
+					<div className="copy_button" onClick={() => copyToClipBoard('bridgetlandia@gmail.com')}>
+						{copySuccess === '' ? <span>Copy Email!</span> : <span>{copySuccess}</span>}
+					</div>
 				</div>
 				<div className="allRights">
 					<p>ALL Rights Reserved @BridgetLandia 2020</p>
@@ -83,4 +119,4 @@ function Footer(props) {
 	);
 }
 
-export default Footer
+export default Footer;

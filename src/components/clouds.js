@@ -52,8 +52,8 @@ export default function Clouds() {
 								<h3>User Friendly</h3>
 							</div>
 							<div>
-								I always try to follow intuitive design patterns and make easily
-								understandable UI elements for the perfect UX experience.
+								I always try to follow intuitive design patterns and make easily understandable UI
+								elements for the perfect UX experience.
 							</div>
 						</Col>
 						<Col sm="4" className="skill-box">
@@ -70,8 +70,8 @@ export default function Clouds() {
 								<h3>Creative</h3>
 							</div>
 							<div>
-								I like to experiment with colors, shapes and movements. Tweeking litte details is a good
-								way to engage your audience and make browsing an adventure.
+								I like to experiment with different colors, shapes and movements. Tweeking small details
+								is a good way to engage your audience and make browsing an adventure.
 							</div>
 						</Col>
 						<Col sm="4" className="skill-box">
