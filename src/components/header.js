@@ -3,7 +3,7 @@ import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstr
 import logo from '../assets/logo.png';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-scroll';
-import resume from '../assets/resume_Brigitta_Toth.pdf';
+import resume from '../assets/CV_Brigitta_Toth.pdf';
 
 const Header = (props) => {
 	const [ collapsed, setCollapsed ] = useState(true);

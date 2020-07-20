@@ -2,7 +2,6 @@ import React from 'react';
 import { Trail, animated } from 'react-spring/renderprops';
 import me from '../assets/blackandwhite.png';
 import arrow from '../assets/arrow.gif';
-import resume from '../assets/resume_Brigitta_Toth.pdf';
 
 export default class About extends React.PureComponent {
 	state = { toggle: true, items: [ 'item1', 'item2', 'item3', 'item4', 'item5' ] };
