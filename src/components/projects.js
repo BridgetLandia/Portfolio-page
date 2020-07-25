@@ -1,8 +1,4 @@
-import React, { useState } from 'react';
-import expensify from '../assets/expensify.png';
-import restaurant from '../assets/restaurant-app.png';
-import sutimama from '../assets/sutimama.png';
-import quiz from '../assets/quiz.jpg';
+import React from 'react';
 
 import {
 	CardDeck,
@@ -29,7 +25,12 @@ export const Projects = (props) => {
 				<Row>
 					<CardDeck className="projects_row">
 						<Card className="projects">
-							<CardImg top width="100%" id="Tooltip" src={restaurant} />
+							<CardImg
+								top
+								width="100%"
+								id="Tooltip"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656538/bridgetlandia/restaurant-app_jf8hfj.png"
+							/>
 							<CardBody>
 								<CardTitle className="project_title">Restaurant App</CardTitle>
 								<CardSubtitle className="project_subtitle">Made with Vue, Vuex, Firebase</CardSubtitle>
@@ -60,7 +61,11 @@ export const Projects = (props) => {
 							</CardBody>
 						</Card>
 						<Card className="projects">
-							<CardImg top width="100%" src={expensify} />
+							<CardImg
+								top
+								width="100%"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656261/bridgetlandia/expensify_mdqmzy.png"
+							/>
 							<CardBody>
 								<CardTitle className="project_title">Expensify App</CardTitle>
 								<CardSubtitle className="project_subtitle">
@@ -93,7 +98,11 @@ export const Projects = (props) => {
 							</CardBody>
 						</Card>
 						<Card className="projects">
-							<CardImg top width="100%" src={quiz} />
+							<CardImg
+								top
+								width="100%"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595660970/bridgetlandia/quiz_tg8nmy.jpg"
+							/>
 							<CardBody>
 								<CardTitle className="project_title">Quiz App</CardTitle>
 								<CardSubtitle className="project_subtitle">
@@ -125,7 +134,11 @@ export const Projects = (props) => {
 							</CardBody>
 						</Card>
 						<Card className="projects">
-							<CardImg top width="100%" src={sutimama} />
+							<CardImg
+								top
+								width="100%"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656886/bridgetlandia/sutimama_izeciz.png"
+							/>
 							<CardBody>
 								<CardTitle className="project_title">Knit and Bake</CardTitle>
 								<CardSubtitle className="project_subtitle">Made with React, React-router</CardSubtitle>

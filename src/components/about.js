@@ -1,6 +1,5 @@
 import React from 'react';
 import { Trail, animated } from 'react-spring/renderprops';
-import me from '../assets/blackandwhite.png';
 import arrow from '../assets/arrow.gif';
 
 export default class About extends React.PureComponent {
@@ -39,7 +38,11 @@ export default class About extends React.PureComponent {
 					</div>
 					<div id="profile_wrapper">
 						<div className="profil">
-							<img id="blackandwhite" src={me} alt="me" />
+							<img
+								id="blackandwhite"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595661005/bridgetlandia/blackandwhite_fd4iv5.png"
+								alt="me"
+							/>
 						</div>
 					</div>
 
