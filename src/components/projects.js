@@ -3,9 +3,7 @@ import expensify from '../assets/expensify.png';
 import restaurant from '../assets/restaurant-app.png';
 import sutimama from '../assets/sutimama.png';
 import quiz from '../assets/quiz.jpg';
-import fruitsoup from '../assets/fruitsoup.gif';
-import shop from '../assets/shop.gif';
-import expensifyGIF from '../assets/expensifyGIF.gif';
+
 import {
 	CardDeck,
 	Card,
@@ -16,19 +14,10 @@ import {
 	CardSubtitle,
 	Button,
 	Container,
-	Row,
-	Modal,
-	ModalFooter
+	Row
 } from 'reactstrap';
 
 export const Projects = (props) => {
-	const [ modal, setModal ] = useState(false);
-	const toggle = () => setModal(!modal);
-	const [ modal2, setModal2 ] = useState(false);
-	const toggle2 = () => setModal2(!modal2);
-	const [ modal3, setModal3 ] = useState(false);
-	const toggle3 = () => setModal3(!modal3);
-
 	return (
 		<div className="projects_container_wrapper">
 			<Container fluid="md" id="projects_container">
@@ -68,18 +57,7 @@ export const Projects = (props) => {
 										GitHub
 									</a>
 								</Button>
-								<Button className="buttons-gif" onClick={toggle}>
-									GIF
-								</Button>
 							</CardBody>
-							<Modal isOpen={modal} toggle={toggle} className="project_modal">
-								<img src={fruitsoup} alt="restaurant-app-gif" className="modal_gif" />
-								<ModalFooter className="project_modal_footer">
-									<Button className="buttons" onClick={toggle}>
-										Cancel
-									</Button>
-								</ModalFooter>
-							</Modal>
 						</Card>
 						<Card className="projects">
 							<CardImg top width="100%" src={expensify} />
@@ -112,18 +90,7 @@ export const Projects = (props) => {
 										GitHub
 									</a>
 								</Button>
-								<Button className="buttons-gif" onClick={toggle2}>
-									GIF
-								</Button>
 							</CardBody>
-							<Modal isOpen={modal2} toggle={toggle2} className="project_modal">
-								<img src={expensifyGIF} alt="expensify-app-gif" className="modal_gif" />
-								<ModalFooter className="project_modal_footer">
-									<Button className="buttons" onClick={toggle2}>
-										Cancel
-									</Button>
-								</ModalFooter>
-							</Modal>
 						</Card>
 						<Card className="projects">
 							<CardImg top width="100%" src={quiz} />
@@ -183,17 +150,6 @@ export const Projects = (props) => {
 										GitHub
 									</a>
 								</Button>
-								<Button className="buttons-gif" onClick={toggle3}>
-									GIF
-								</Button>
-								<Modal isOpen={modal3} toggle={toggle3} className="project_modal">
-									<img src={shop} alt="knit-and-bake-app-gif" className="modal_gif" />
-									<ModalFooter className="project_modal_footer">
-										<Button className="buttons" onClick={toggle3}>
-											Cancel
-										</Button>
-									</ModalFooter>
-								</Modal>
 							</CardBody>
 						</Card>
 					</CardDeck>
