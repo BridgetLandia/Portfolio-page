@@ -29,7 +29,7 @@ export const Projects = (props) => {
 								top
 								width="100%"
 								id="Tooltip"
-								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656538/bridgetlandia/restaurant-app_jf8hfj.png"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674898/bridgetlandia/restaurant-app_njrcbn.png"
 							/>
 							<CardBody>
 								<CardTitle className="project_title">Restaurant App</CardTitle>
@@ -64,7 +64,7 @@ export const Projects = (props) => {
 							<CardImg
 								top
 								width="100%"
-								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656261/bridgetlandia/expensify_mdqmzy.png"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674903/bridgetlandia/expensify_m8nayq.png"
 							/>
 							<CardBody>
 								<CardTitle className="project_title">Expensify App</CardTitle>
@@ -101,7 +101,7 @@ export const Projects = (props) => {
 							<CardImg
 								top
 								width="100%"
-								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595660970/bridgetlandia/quiz_tg8nmy.jpg"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674955/bridgetlandia/quiz_m5bpyz.jpg"
 							/>
 							<CardBody>
 								<CardTitle className="project_title">Quiz App</CardTitle>
@@ -137,7 +137,7 @@ export const Projects = (props) => {
 							<CardImg
 								top
 								width="100%"
-								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595656886/bridgetlandia/sutimama_izeciz.png"
+								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674911/bridgetlandia/sutimama_vwregy.png"
 							/>
 							<CardBody>
 								<CardTitle className="project_title">Knit and Bake</CardTitle>
