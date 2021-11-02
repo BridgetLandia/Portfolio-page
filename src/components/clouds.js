@@ -15,6 +15,7 @@ import bird5 from '../assets/bird5.svg';
 import bird6 from '../assets/bird6.svg';
 
 export default function Clouds() {
+	// eslint-disable-next-line
 	const [ ref, setRef ] = useState([]);
 	useEffect(() => {
 		AOS.init({

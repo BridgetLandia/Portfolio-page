@@ -19,7 +19,7 @@ export default function Welcome() {
 			}
 		}
 	);
-
+		// eslint-disable-next-line
 	const [ ref, setRef ] = useState([]);
 	useEffect(() => {
 		AOS.init({
