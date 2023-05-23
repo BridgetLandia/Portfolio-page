@@ -112,7 +112,7 @@ function Footer(props) {
 					</div>
 				</div>
 				<div className="allRights">
-					<p>ALL Rights Reserved @BridgetLandia 2020</p>
+					<p>ALL Rights Reserved @BridgetLandia {new Date().getFullYear()}</p>
 				</div>
 			</div>
 		</section>
