@@ -52,7 +52,7 @@ export default function Clouds() {
 							<div>
 								<h3>User Friendly</h3>
 							</div>
-							<div>
+							<div className="px-2">
 								I always try to follow intuitive design patterns and make easily understandable UI
 								elements for the perfect UX experience.
 							</div>
@@ -70,9 +70,9 @@ export default function Clouds() {
 							<div>
 								<h3>Creative</h3>
 							</div>
-							<div>
+							<div className="px-2">
 								I like to experiment with different colors, shapes and movements. Tweeking small details
-								is a good way to engage your audience and make browsing an adventure.
+								is a good way to engage your audience.
 							</div>
 						</Col>
 						<Col sm="4" className="skill-box">
@@ -88,9 +88,9 @@ export default function Clouds() {
 							<div>
 								<h3>Problem Solver</h3>
 							</div>
-							<div>
-								Finding the right business solution and the optimal framework is crucial for me in every
-								project.
+							<div className="px-2">
+								Finding the optimal technology is crucial for me in every
+								project. I believe in applying complexity only when necessary.
 							</div>
 						</Col>
 					</Row>

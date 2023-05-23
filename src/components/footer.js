@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useInputState from './useInputState';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
@@ -26,7 +26,7 @@ function Footer(props) {
 	function sendEmail(e) {
 		e.preventDefault();
 
-		emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_ckDFn74I5LyHmMVTfGL9S').then(
+		emailjs.sendForm('service_zxc9c1g', 'template_2w58gwn', e.target, 'wg913Ws7lcFw-RMW9').then(
 			(result) => {
 				console.log(result.text);
 			},
@@ -83,7 +83,7 @@ function Footer(props) {
 					</ModalBody>
 					<ModalFooter>
 						<Button className="buttons" onClick={toggle}>
-							Cancel
+							Close
 						</Button>
 					</ModalFooter>
 				</Modal>
@@ -104,10 +104,10 @@ function Footer(props) {
 						<img className="icons" src={linkedin} alt="linkedin" />
 					</a>
 					<div>
-						<p>Email: bridgetlandia@gmail.com</p>
+						<p>Email: brigitta.tth@gmail.com</p>
 					</div>
 
-					<div className="copy_button" onClick={() => copyToClipBoard('bridgetlandia@gmail.com')}>
+					<div className="copy_button" onClick={() => copyToClipBoard('brigitta.tth@gmail.com')}>
 						{copySuccess === '' ? <span>Copy Email!</span> : <span>{copySuccess}</span>}
 					</div>
 				</div>
