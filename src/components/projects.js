@@ -31,7 +31,7 @@ export const Projects = (props) => {
 								id="Tooltip"
 								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674898/bridgetlandia/restaurant-app_njrcbn.png"
 							/>
-							<CardBody>
+							<CardBody className="card_body">
 								<CardTitle className="project_title">Restaurant App</CardTitle>
 								<CardSubtitle className="project_subtitle">Made with Vue, Vuex, Firebase</CardSubtitle>
 								<CardText>
