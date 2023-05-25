@@ -78,16 +78,6 @@ export const Projects = (props) => {
 								<Button className="buttons">
 									<a
 										className="project_links"
-										href="https://elso-app.herokuapp.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Live
-									</a>
-								</Button>
-								<Button className="buttons">
-									<a
-										className="project_links"
 										href="https://github.com/BridgetLandia/expensify-app"
 										target="_blank"
 										rel="noopener noreferrer"
@@ -143,16 +133,6 @@ export const Projects = (props) => {
 								<CardTitle className="project_title">Knit and Bake</CardTitle>
 								<CardSubtitle className="project_subtitle">Made with React, React-router</CardSubtitle>
 								<CardText>Small business website with a shop section.</CardText>
-								<Button className="buttons">
-									<a
-										className="project_links"
-										href="https://sutimama-kotodeje.herokuapp.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Live
-									</a>
-								</Button>
 								<Button className="buttons">
 									<a
 										className="project_links"
