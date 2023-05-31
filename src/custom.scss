@@ -57,7 +57,7 @@
 		no-repeat fixed top center / cover;
 }
 
-.first_line {
+.first_line_welcome_message {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
@@ -109,7 +109,7 @@
 
 //About section
 
-.cool {
+.about_container {
 	height: 88vh;
 	display: flex;
 	background: linear-gradient(90deg, #000000 50%, #FFFFFF 50%);
@@ -117,7 +117,7 @@
 }
 
 
-.profil {
+.profile_picture_section {
 	display: flex;
 	width: 100%;
 	height: auto;
@@ -126,7 +126,7 @@
 	margin-right: 8rem;
 }
 
-#blackandwhite {
+#profile_picture_img {
 	display: flex;
 	margin-top: 6rem;
 	max-width: 50%;
@@ -135,7 +135,7 @@
 	z-index: 0;
 }
 
-#probe_text {
+#personal_intro_text_wrapper {
 	display: flex;
 	position: absolute;
 	align-items: flex-start;
@@ -156,7 +156,7 @@
 	height: 87vh;
 }
 
-.welcome_text {
+.personal_intro_text {
 	font-size: 1rem;
 	color: white;
 	text-align: left;
@@ -434,14 +434,14 @@ h3 {
 
 @media only screen and (max-width: 768px) {
 
-	.cool {
+	.about_container {
 		height: 75vh;
 		display: flex;
 		background: black;
 
 	}
 
-	#probe_text {
+	#personal_intro_text_wrapper {
 		display: flex;
 		position: absolute;
 		align-items: flex-start;
@@ -450,21 +450,21 @@ h3 {
 		flex: 50%;
 	}
 
-	#blackandwhite {
-		display: flex;
-		margin-top: 5rem;
-		margin-right: 4rem;
-		height: auto;
-		align-self: flex-start;
-
-	}
-
-	.profil {
+	.profile_picture_section {
 		display: flex;
 		z-index: 0;
 		justify-content: flex-end;
 		align-self: center;
-		margin-top: 3rem;
+		margin-top: 12rem;
+
+	}
+
+	#profile_picture_img {
+		display: flex;
+		margin-top: 5rem;
+		margin-left: 8rem;
+		height: auto;
+		align-self: flex-start;
 
 	}
 
@@ -472,7 +472,7 @@ h3 {
 		margin-top: 4rem;
 	}
 
-	.welcome_text {
+	.personal_intro_text {
 		width: 100%;
 	}
 
@@ -489,8 +489,7 @@ h3 {
 
 	#projects_container {
 		position: relative;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding: 2rem;
 		height: 100%;
 	}
 
@@ -562,7 +561,7 @@ h3 {
 }
 @media only screen and (min-width: 1824px) {
 	/* Styles */
-	.first_line {
+	.first_line_welcome_message {
 		text-align: center;
 		align-self: center;
 		justify-self: center;

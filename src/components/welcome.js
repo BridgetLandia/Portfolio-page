@@ -29,7 +29,7 @@ export default function Welcome() {
 	return (
 		<div>
 			<div className="container_marble">
-				<animated.div style={fadein} className="first_line">
+				<animated.div style={fadein} className="first_line_welcome_message">
 					<div>
 						<div
 							ref={(ref) => {
