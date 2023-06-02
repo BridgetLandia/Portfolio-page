@@ -1,11 +1,33 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
+//.theme-light {
+//	--color-primary: #87CEEB;
+//}
+
+.dark_mode {
+	--color-primary: #000000;
+	--color-secondary: #d79abc;
+	--color-opacity: rgba(0, 0, 0, 1);
+	--border:(1px solid rgba(0, 0, 0, 0.3));
+	--color-moon-text: white;
+
+}
+
+.light_mode {
+	--color-primary: #89e9f0;
+	--color-secondary: #401145;
+	--color-opacity: rgba(135, 206, 250, 1);
+	--border:(1px solid rgba(135, 206, 250, 0.75));
+	--color-moon-text: #696161;
+}
+
 //Navbar start
 
 #mainNavbar {
-	background: black;
+	background: var(--color-primary);
 	padding-bottom: 0rem;
+	opacity: 0.9;
 }
 
 #mainNavbar .nav-link {
@@ -22,11 +44,13 @@
 
 .nav-item {
 	padding-right: 1rem;
+	list-style-type: none;
 }
+
 
 #logo {
 	height: 50px;
-	margin-top: -2rem;
+	margin-top: -3rem;
 	transition: all .3s ease-in-out;
 	cursor: pointer;
 }
@@ -43,41 +67,124 @@
 	font-size: 4rem;
 }
 
+label {
+	width:52px;
+	height:22px;
+	position: relative;
+	display: block;
+	background: #ebebeb;
+	border-radius: 20px;
+	box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+	cursor: pointer;
+	margin-top: 1rem;
+	margin-bottom: 0rem;
+}
+
+label:after {
+	content: "";
+	width:18px;
+	height: 18px;
+	position: absolute;
+	top:2px;
+	left:2px;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	border-radius: 18px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+input#darkmode-toggle  {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+ input#darkmode-toggle:checked + label {
+	background: #242424;
+}
+
+ input#darkmode-toggle:checked + label:after {
+	left:48px;
+	transform: translateX(-95%);
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+
+label, label:after {
+	transition: 1s
+}
+
+
 //Navbar end
 
 //Welcome section
 
-.container_marble {
-	display: flex;
-	overflow: hidden;
-	height: 90vh;
-	transition: background-image 1s linear;
-	justify-content: center;
-	background: url('https://res.cloudinary.com/dfjaln3y4/image/upload/v1595661017/bridgetlandia/marble_bg_tiny_baplot.jpg')
-		no-repeat fixed top center / cover;
+.moon {
+	content:'';
+	display:block;
+	height:21rem;
+	width:21rem;
+	border-radius:100%;
+	background :#ddd;
+	margin:auto;
+	box-shadow:0 0 150px #F4EBD0,0 0 450px #F4EBD0, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
+	transition:1s;
+	position:absolute;
+	top:auto;
+	left:50%;
+	margin-left:-160px;
+	margin-top:-70px;
+	z-index: 0;
 }
+
+.moon:hover {
+	box-shadow:0 0 50px #F4EBD0,0 0 30px #F4EBD0, inset 0 10px 10px 20px #ddd, inset 30px 0 35px 50px #ccc;
+	background: #ece3e3;
+	transition:1s;
+}
+
+
+.clouds_welcome_section {
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	background-color: var(--color-primary);
+	background-image: url('https://res.cloudinary.com/dfjaln3y4/image/upload/v1595664841/bridgetlandia/small_cloud_lmdnll.png');
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+	background-size: cover;
+	animation: 250s para_welcome_section infinite linear;
+	transform: rotate(0.02deg);
+}
+
+@keyframes para_welcome_section {
+	100% {
+		background-position: 500px 50%, 1000px 100%, 400px 0;
+	}
+}
+
 
 .first_line_welcome_message {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
 	display: flex;
-	color: whitesmoke;
+	color:  #696161;
 	font-size: 1.4rem;
-	background-color: black;
-	opacity: 0.9;
-	padding: 40px 40px 40px 50px;
+	padding: 40px 40px 60px 50px;
 	z-index: 0;
-	height: 17rem;
+	height: 18rem;
 	width: 21rem;
 }
+
 
 .intro {
 	padding-bottom: 2rem;
 }
 
 .buttons {
-	background: black;
+	background: var(--color-primary);
 	border: solid 2px;
 	border-radius: 10px;
 	border-color: white;
@@ -97,22 +204,13 @@
 	border-color: #fffd00;
 }
 
-// @keyframes grow {
-//     0% { transform: scale(0.6)}
-//     50% { transform: scale(0.9)}
-//   }
-
-//   @-webkit-keyframes grow {
-//     0% { transform: scale(0.6) }
-//     50% { transform: scale(0.9) }
-//   }
 
 //About section
 
 .about_container {
 	height: 88vh;
 	display: flex;
-	background: linear-gradient(90deg, #000000 50%, #FFFFFF 50%);
+	background: linear-gradient(90deg, var(--color-primary) 50%, #FFFFFF 50%);
 
 }
 
@@ -123,7 +221,7 @@
 	height: auto;
 	z-index: 0;
 	justify-content: flex-end;
-	margin-right: 8rem;
+	margin-right: 12rem;
 }
 
 #profile_picture_img {
@@ -144,19 +242,9 @@
 	flex: 50%;
 }
 
-.container_welcome {
-	display: flex;
-	margin: 0px;
-	padding: 0;
-}
-
-#Welcome {
-	padding: 2rem;
-	flex: 50%;
-	height: 87vh;
-}
 
 .personal_intro_text {
+	padding: 2rem;
 	font-size: 1rem;
 	color: white;
 	text-align: left;
@@ -173,9 +261,7 @@
 
 h2 {
 	font-size: 1.8rem;
-	//background: -webkit-linear-gradient(#fffd00, #f737f1);
-	//background: -webkit-linear-gradient(#d7bfe0, rgb(114, 214, 209));
-	background: -webkit-linear-gradient(#d7bfe0, rgb(231, 247, 6));
+	background: -webkit-linear-gradient(#d7bfe0, var(--color-secondary));
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding-bottom: 1rem;
@@ -265,7 +351,7 @@ h1 {
 
 .skills {
 	height: 100%;
-	color: #d79abc;
+	color: var(--color-secondary)
 }
 
 .stack_wraper {
@@ -292,7 +378,7 @@ h3 {
 	display: flex;
 	height: 180vh;
 	width: 100%;
-	background-color: black;
+	background-color: var(--color-primary);
 	background-image: url('https://res.cloudinary.com/dfjaln3y4/image/upload/v1595664841/bridgetlandia/small_cloud_lmdnll.png'),
 		url('https://res.cloudinary.com/dfjaln3y4/image/upload/v1595664869/bridgetlandia/shiny_cloud_qmc9um.png');
 	background-repeat: repeat-x;
@@ -317,9 +403,7 @@ h3 {
 	text-shadow: yellow;
 	padding-top: 3.2rem;
 	text-align: center;
-	//background: -webkit-linear-gradient(#fffd00, #f737f1);
-	//background: -webkit-linear-gradient(#b700ff, rgb(140, 213, 216));
-	background: -webkit-linear-gradient(#d7bfe0, rgb(231, 247, 6));
+	background: -webkit-linear-gradient(#d7bfe0, var(--color-secondary));
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -332,10 +416,9 @@ h3 {
 //Footer
 
 .footer {
-	background: black;
+	background: var(--color-primary);
 	height: 80%;
-	//color: #fffd00;
-	color: rgb(231, 247, 6);
+	color: var(--color-secondary);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -387,9 +470,10 @@ h3 {
 }
 
 .allRights {
+	margin-top: 2rem;
 	display: flex;
 	align-self: flex-end;
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 }
 
 .info {
@@ -397,9 +481,10 @@ h3 {
 	justify-self: center;
 }
 
-.icon_wrapper {
+.contact_icons_wrapper {
 	display: flex;
 	justify-content: flex-start;
+	align-items: flex-end;
 	width: 100%;
 }
 
@@ -423,21 +508,44 @@ h3 {
 }
 
 .copy_button {
-	color: rgb(231, 247, 6);
-	background: black;
+	color: var(--color-secondary);
+	background: var(--color-primary);
 	cursor: pointer;
 	margin-left: 1rem;
 	text-decoration: underline;
 }
 
+
+
 //Media@
 
 @media only screen and (max-width: 768px) {
 
+	//Welcome section
+
+	.moon {
+		margin-left:-275px;
+		margin-top:-155px;
+		height:12rem;
+		width:12rem;
+
+	}
+
+	.first_line_welcome_message {
+		/* From https://css.glass */
+		background: var(--color-opacity);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(18.9px);
+		-webkit-backdrop-filter: blur(18.9px);
+	}
+
+	//About section
+
 	.about_container {
-		height: 75vh;
+		height: 95vh;
 		display: flex;
-		background: black;
+		background: var(--color-primary);
 
 	}
 
@@ -455,14 +563,14 @@ h3 {
 		z-index: 0;
 		justify-content: flex-end;
 		align-self: center;
-		margin-top: 12rem;
+		margin-top: 10rem;
 
 	}
 
 	#profile_picture_img {
 		display: flex;
-		margin-top: 5rem;
-		margin-left: 8rem;
+		margin-top: 10rem;
+		margin-left: 15rem;
 		height: auto;
 		align-self: flex-start;
 
@@ -474,18 +582,17 @@ h3 {
 
 	.personal_intro_text {
 		width: 100%;
+		margin-top: 0rem;
+		padding: 1rem;
+
 	}
 
-	.icon_wrapper {
-		display: flex;
-		justify-content: flex-start;
-		width: 100%;
-		margin-top: 1rem;
-	}
 
 	#click {
 		display: none;
 	}
+
+	//Project section
 
 	#projects_container {
 		position: relative;
@@ -503,9 +610,12 @@ h3 {
 		margin-bottom: 0rem;
 	}
 
+	//Skill section
+
 	.section_title {
 		margin-left: 1rem;
 	}
+
 	.stack_wraper {
 		display: block;
 		width: 20%;
@@ -513,16 +623,22 @@ h3 {
 
 	.skill-box {
 		text-align: center;
-		background-color: black;
+		background-color: var(--color-primary);
 		padding-bottom: 2rem;
 		opacity: 0.9;
 	}
+
+
 	.stack_row {
 		margin-top: 0px;
 	}
+
+
 	.stack_icon {
 		max-width: 63.77px;
 	}
+
+	//Footer section
 
 	.contact {
 		height: 62px;
@@ -531,13 +647,31 @@ h3 {
 	.message {
 		min-height: 169px;
 	}
-	.icon_wrapper {
+
+	.contact_icons_wrapper {
 		margin-top: 2.5rem;
 		display: flex;
 		justify-content: flex-start;
+		justify-items: flex-end;
 		width: 100%;
 	}
+
+	.icons {
+		margin-right: 0rem;
+
+	}
+
 	.copy_button {
+		display: none;
+	}
+
+	.email {
+		margin-left: 0.5rem;
+
+	}
+
+
+	.email_description {
 		display: none;
 	}
 }
@@ -555,9 +689,7 @@ h3 {
 		margin-top: 3rem;
 		transition: all .2s ease-in-out;
 	}
-	.profil {
-		margin-right: 0rem;
-	}
+
 }
 @media only screen and (min-width: 1824px) {
 	/* Styles */
@@ -568,7 +700,7 @@ h3 {
 		display: flex;
 		color: white;
 		font-size: 1.6rem;
-		background-color: black;
+		background-color: var(--color-primary);
 		opacity: 0.9;
 		padding: 40px 40px 40px 50px;
 		z-index: 0;

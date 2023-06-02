@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default class About extends React.PureComponent {
-	render() {
+export default function About()  {
+
 		return (
 			<div className="about_container">
 					<div id="personal_intro_text_wrapper">
@@ -23,5 +23,5 @@ export default class About extends React.PureComponent {
 						</div>
 			</div>
 		);
-	}
+
 }

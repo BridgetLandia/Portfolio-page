@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, } from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink} from 'reactstrap';
 import logo from '../assets/logo.png';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-scroll';
 import resume from '../assets/CV_Brigitta_Toth_2023.pdf';
 
-
+import {useTheme} from "../hooks/useTheme";
 const Header = (props) => {
+	const { toggleTheme } = useTheme()
 	const [ collapsed, setCollapsed ] = useState(true);
+
 	const toggleNavbar = () => setCollapsed(!collapsed);
 	const fadeinme = useSpring(
 		{ opacity: 1, marginTop: 0, from: { opacity: 0 } },
@@ -86,6 +88,10 @@ const Header = (props) => {
 								Contact
 							</NavItem>
 						</Link>
+						<input onChange={() => {
+							toggleTheme();
+						}} type="checkbox" id="darkmode-toggle"/>
+						<label htmlFor="darkmode-toggle"/>
 					</Nav>
 				</Collapse>
 			</Navbar>

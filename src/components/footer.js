@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useInputState from './useInputState';
+import useInputState from '../hooks/useInputState';
 import emailjs from '@emailjs/browser';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import github from '../assets/github.svg';
@@ -88,7 +88,7 @@ function Footer(props) {
 					</ModalFooter>
 				</Modal>
 
-				<div className="icon_wrapper">
+				<div className="contact_icons_wrapper">
 					<a
 						href="https://github.com/BridgetLandia?tab=repositories"
 						target="_blank"
@@ -104,7 +104,7 @@ function Footer(props) {
 						<img className="icons" src={linkedin} alt="linkedin" />
 					</a>
 					<div>
-						<p>Email: brigitta.tth@gmail.com</p>
+						<div className="email"><span className="email_description">Email:</span> brigitta.tth@gmail.com</div>
 					</div>
 
 					<div className="copy_button" onClick={() => copyToClipBoard('brigitta.tth@gmail.com')}>

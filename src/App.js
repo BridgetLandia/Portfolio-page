@@ -5,9 +5,11 @@ import Welcome from './components/welcome';
 import Footer from './components/footer';
 import About from './components/about';
 import Clouds from './components/clouds';
+import {ThemeProvider} from "./hooks/useTheme";
 
 function App() {
 	return (
+		<ThemeProvider>
 		<div className="App">
 			<Header />
 			<Welcome />
@@ -16,6 +18,7 @@ function App() {
 			<Clouds />
 			<Footer />
 		</div>
+		</ThemeProvider>
 	);
 }
 

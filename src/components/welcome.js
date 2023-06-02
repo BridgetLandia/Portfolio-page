@@ -28,9 +28,11 @@ export default function Welcome() {
 	});
 	return (
 		<div>
-			<div className="container_marble">
+			<div className="clouds_welcome_section">
+
 				<animated.div style={fadein} className="first_line_welcome_message">
 					<div>
+						<span className="moon"></span>
 						<div
 							ref={(ref) => {
 								setRef(ref);
