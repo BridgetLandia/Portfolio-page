@@ -52,7 +52,7 @@ export default function Clouds() {
 							<div>
 								<h3>User Friendly</h3>
 							</div>
-							<div className="px-2">
+							<div className="skills_text px-2">
 								I always try to follow intuitive design patterns and make easily understandable UI
 								elements for the perfect UX experience.
 							</div>
@@ -70,7 +70,7 @@ export default function Clouds() {
 							<div>
 								<h3>Creative</h3>
 							</div>
-							<div className="px-2">
+							<div className="skills_text px-2">
 								I like to experiment with different colors, shapes and movements. Tweeking small details
 								is a good way to engage your audience.
 							</div>
@@ -88,7 +88,7 @@ export default function Clouds() {
 							<div>
 								<h3>Problem Solver</h3>
 							</div>
-							<div className="px-2">
+							<div className="skills_text px-2">
 								Finding the optimal technology is crucial for me in every
 								project. I believe in applying complexity only when necessary.
 							</div>

@@ -6,39 +6,43 @@
 //}
 
 .dark_mode {
-	--color-primary: #000000;
-	--color-secondary: #d79abc;
-	--color-opacity: rgba(0, 0, 0, 1);
+	--color-primary: #09233f;
+	--color-secondary: #eabe44;
+	--color-third: #d7bfe0;
+	--color-opacity: rgba(9, 35, 63, 0.9);
 	--border:(1px solid rgba(0, 0, 0, 0.3));
-	--color-moon-text: white;
-
+	--color-moon-text: #ddd;
+	--color-nav-text: white;
+	--z-index-moon: 100
 }
 
 .light_mode {
-	--color-primary: #89e9f0;
-	--color-secondary: #401145;
-	--color-opacity: rgba(135, 206, 250, 1);
+	--color-primary: #51d0de;
+	--color-secondary: #bf4aa8;
+	--color-third: #2c3eb5;
+	--color-opacity: rgba(81, 208, 222, 0.6);
 	--border:(1px solid rgba(135, 206, 250, 0.75));
-	--color-moon-text: #696161;
+	--color-moon-text: #bf4aa8;
+	--color-nav-text: #bf4aa8;
+	--z-index-moon: 0
 }
 
 //Navbar start
 
 #mainNavbar {
 	background: var(--color-primary);
-	padding-bottom: 0rem;
+	padding: 0rem 1rem;
 	opacity: 0.9;
 }
 
 #mainNavbar .nav-link {
-	color: white;
-	text-shadow: 2px 2px #5f6769;
+	color: var(--color-nav-text);
 	font-size: 1.5rem;
 	transition: text 3s ease-in;
 }
 
 #mainNavbar .nav-link:hover {
-	color: #d79abc;
+	color: #f737f1;
 	cursor: pointer;
 }
 
@@ -87,7 +91,7 @@ label:after {
 	position: absolute;
 	top:2px;
 	left:2px;
-	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	background: linear-gradient(180deg,#ffcc89,#fffd00);
 	border-radius: 18px;
 	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
@@ -120,19 +124,19 @@ label, label:after {
 .moon {
 	content:'';
 	display:block;
-	height:21rem;
-	width:21rem;
+	height:10rem;
+	width:10rem;
 	border-radius:100%;
 	background :#ddd;
 	margin:auto;
-	box-shadow:0 0 150px #F4EBD0,0 0 450px #F4EBD0, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
+	box-shadow:0 0 50px #F4EBD0,0 0 350px #F4EBD0, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
 	transition:1s;
 	position:absolute;
 	top:auto;
 	left:50%;
-	margin-left:-160px;
-	margin-top:-70px;
-	z-index: 0;
+	margin-left:-352px;
+	margin-top:260px;
+	z-index: var(--z-index-moon)
 }
 
 .moon:hover {
@@ -143,7 +147,6 @@ label, label:after {
 
 
 .clouds_welcome_section {
-	z-index: 10;
 	display: flex;
 	justify-content: center;
 	height: 100vh;
@@ -154,8 +157,10 @@ label, label:after {
 	background-attachment: fixed;
 	background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
 	background-size: cover;
-	animation: 250s para_welcome_section infinite linear;
+	animation: 100s para_welcome_section infinite linear;
 	transform: rotate(0.02deg);
+	z-index: 100;
+
 }
 
 @keyframes para_welcome_section {
@@ -165,30 +170,35 @@ label, label:after {
 }
 
 
-.first_line_welcome_message {
+
+.welcome_message_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 	text-align: center;
 	align-self: center;
-	justify-self: center;
-	display: flex;
-	color:  #696161;
+	justify-content: center;
+	color: var(--color-moon-text);
 	font-size: 1.4rem;
-	padding: 40px 40px 60px 50px;
-	z-index: 0;
-	height: 18rem;
-	width: 21rem;
+	font-weight: bold;
+	padding: 40px;
+	height: 100vh;
+	width: 100vw;
+	background: var(--color-opacity);
+	border-radius: 13px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid var(--color-opacity);
 }
 
-
-.intro {
-	padding-bottom: 2rem;
-}
 
 .buttons {
 	background: var(--color-primary);
-	border: solid 2px;
-	border-radius: 10px;
 	border-color: white;
 	color: white;
+	border: solid 2px;
+	border-radius: 10px;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	padding-left: 1rem;
@@ -245,23 +255,22 @@ label, label:after {
 
 .personal_intro_text {
 	padding: 2rem;
-	font-size: 1rem;
-	color: white;
 	text-align: left;
 	width: 45%;
 	margin-top: 2rem;
 }
 
-#White {
-	margin-top: 5rem;
-	background-color: rgba(255, 255, 255, 0.849);
-	padding: 2rem;
-	flex: 50%;
+.personal_intro_paragraph {
+	font-size: 1rem;
+	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
 }
 
 h2 {
 	font-size: 1.8rem;
-	background: -webkit-linear-gradient(#d7bfe0, var(--color-secondary));
+	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding-bottom: 1rem;
@@ -354,6 +363,12 @@ h1 {
 	color: var(--color-secondary)
 }
 
+.skills_text {
+	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .stack_wraper {
 	display: flex;
 	height: 200px;
@@ -384,7 +399,7 @@ h3 {
 	background-repeat: repeat-x;
 	background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
 	background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
-	animation: 250s para infinite linear;
+	animation: 450s para infinite linear;
 	transform: rotate(0.02deg);
 }
 
@@ -524,20 +539,22 @@ h3 {
 	//Welcome section
 
 	.moon {
-		margin-left:-275px;
-		margin-top:-155px;
+		margin-left:-225px;
+		margin-top:-25px;
 		height:12rem;
 		width:12rem;
 
 	}
 
-	.first_line_welcome_message {
+	.welcome_message_wrapper {
 		/* From https://css.glass */
 		background: var(--color-opacity);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(18.9px);
 		-webkit-backdrop-filter: blur(18.9px);
+		height: 18rem;
+		width: 21rem;
 	}
 
 	//About section
@@ -693,7 +710,7 @@ h3 {
 }
 @media only screen and (min-width: 1824px) {
 	/* Styles */
-	.first_line_welcome_message {
+	.welcome_message_wrapper {
 		text-align: center;
 		align-self: center;
 		justify-self: center;

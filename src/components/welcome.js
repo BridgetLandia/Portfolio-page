@@ -29,33 +29,27 @@ export default function Welcome() {
 	return (
 		<div>
 			<div className="clouds_welcome_section">
-
-				<animated.div style={fadein} className="first_line_welcome_message">
-					<div>
-						<span className="moon"></span>
+				<span className="moon"></span>
+				<animated.div style={fadein} className="welcome_message_wrapper">
 						<div
 							ref={(ref) => {
 								setRef(ref);
 							}}
 							data-aos="fade-left"
 						>
-							<p>Hello World!</p>
+							Hello World!
 						</div>
-						<div>
-							<p
-								className="intro"
+							<div
 								ref={(ref) => {
 									setRef(ref);
 								}}
 								data-aos="fade-right"
 							>
-								I'm Brigitta,<br/> a web developer with a keen eye for UI/UX design. Check out my projects!
-							</p>
-						</div>
+								I'm Brigitta, a web developer<br/> with a keen eye for UI/UX design.
+							</div>
 						<Link to="projects_container" smooth={true} offset={-100} duration={500}>
 							<button className="buttons">View My Work</button>
 						</Link>
-					</div>
 				</animated.div>
 			</div>
 		</div>

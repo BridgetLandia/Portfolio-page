@@ -6,12 +6,12 @@ export default function About()  {
 			<div className="about_container">
 					<div id="personal_intro_text_wrapper">
 								<div className="personal_intro_text">
-									<p>
+									<p className="personal_intro_paragraph">
 										Good apps make life easier that is why I am passionate about software
 										development. I enjoy building nice and original apps with the best practices in
 										mind.
 									</p>
-									<p>I love being creative and I truly thrive when faced with a challenging problem to solve.</p>
+									<p className="personal_intro_paragraph">I love being creative and I truly thrive when faced with a challenging problem to solve.</p>
 								</div>
 							</div>
 						<div className="profile_picture_section">
