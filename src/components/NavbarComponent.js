@@ -6,8 +6,8 @@ import { Link } from 'react-scroll';
 import resume from '../assets/CV_Brigitta_Toth_2023.pdf';
 
 import {useTheme} from "../hooks/useTheme";
-const Header = (props) => {
-	const { toggleTheme } = useTheme()
+const NavbarComponent = (props) => {
+	const { theme, toggleTheme } = useTheme()
 	const [ collapsed, setCollapsed ] = useState(true);
 
 	const toggleNavbar = () => setCollapsed(!collapsed);
@@ -26,30 +26,11 @@ const Header = (props) => {
 				<Link to="projects_container" smooth={true} offset={-100} duration={500}>
 					<NavItem className="nav-brand">
 						<img id="logo" src={logo} alt="logo" />
-
-						<span />
 					</NavItem>
 				</Link>
 				<NavbarToggler onClick={toggleNavbar} className="mr-2" />
 				<Collapse isOpen={!collapsed} navbar>
 					<Nav className="ml-auto" navbar>
-						<Link
-							className="nav-link"
-							to="about_container"
-							activeClass="active"
-							smooth={true}
-							offset={-100}
-							duration={500}
-						>
-							<NavItem onClick={toggleNavbar} className="nav-item">
-								About
-							</NavItem>
-						</Link>
-						<NavItem className="nav-item">
-							<NavLink href={resume} target="_blank" rel="noopener noreferrer" className="nav-link">
-								CV
-							</NavLink>
-						</NavItem>
 						<Link
 							className="nav-link"
 							to="skills"
@@ -83,14 +64,33 @@ const Header = (props) => {
 								GitHub
 							</NavLink>
 						</NavItem>
+						<Link
+							className="nav-link"
+							to="about_container"
+							activeClass="active"
+							smooth={true}
+							offset={-100}
+							duration={500}
+						>
+							<NavItem onClick={toggleNavbar} className="nav-item">
+								About
+							</NavItem>
+						</Link>
 						<Link className="nav-link" to="contact" smooth={true} offset={-100} duration={500}>
 							<NavItem className="nav-item" onClick={toggleNavbar}>
 								Contact
 							</NavItem>
 						</Link>
-						<input onChange={() => {
-							toggleTheme();
-						}} type="checkbox" id="darkmode-toggle"/>
+						<NavItem className="nav-item">
+							<NavLink href={resume} target="_blank" rel="noopener noreferrer" className="nav-link">
+								CV
+							</NavLink>
+						</NavItem>
+						<input
+							onChange={() => {
+							toggleTheme();}}
+							checked={theme === 'dark'}
+							type="checkbox" id="darkmode-toggle"/>
 						<label htmlFor="darkmode-toggle"/>
 					</Nav>
 				</Collapse>
@@ -99,4 +99,4 @@ const Header = (props) => {
 	);
 };
 
-export default Header;
+export default NavbarComponent;

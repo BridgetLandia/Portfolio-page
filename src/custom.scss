@@ -1,9 +1,6 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
-//.theme-light {
-//	--color-primary: #87CEEB;
-//}
 
 .dark_mode {
 	--color-primary: #09233f;
@@ -17,21 +14,26 @@
 }
 
 .light_mode {
-	--color-primary: #51d0de;
-	--color-secondary: #bf4aa8;
+	--color-primary: #94bfdf;
+	--color-secondary: #dc357d;
 	--color-third: #2c3eb5;
-	--color-opacity: rgba(81, 208, 222, 0.6);
+	--color-opacity: rgba(48, 191, 223 0.6);
 	--border:(1px solid rgba(135, 206, 250, 0.75));
-	--color-moon-text: #bf4aa8;
-	--color-nav-text: #bf4aa8;
+	--color-moon-text: #dc357d;
+	--color-nav-text: white;
 	--z-index-moon: 0
 }
 
-//Navbar start
+.App {
+	text-align: center;
+	background-color: var(--color-primary)
+}
+
+//NavbarComponent start
 
 #mainNavbar {
 	background: var(--color-primary);
-	padding: 0rem 1rem;
+	padding: 1rem;
 	opacity: 0.9;
 }
 
@@ -42,7 +44,7 @@
 }
 
 #mainNavbar .nav-link:hover {
-	color: #f737f1;
+	color: #dc357d;
 	cursor: pointer;
 }
 
@@ -54,7 +56,6 @@
 
 #logo {
 	height: 50px;
-	margin-top: -3rem;
 	transition: all .3s ease-in-out;
 	cursor: pointer;
 }
@@ -103,13 +104,13 @@ input#darkmode-toggle  {
 }
 
  input#darkmode-toggle:checked + label {
-	background: #242424;
+	background: #09233f;
 }
 
  input#darkmode-toggle:checked + label:after {
 	left:48px;
 	transform: translateX(-95%);
-	background: linear-gradient(180deg,#777,#3a3a3a);
+	background: linear-gradient(180deg, #f8f7f2,#3a3a3a);
 }
 
 label, label:after {
@@ -117,7 +118,7 @@ label, label:after {
 }
 
 
-//Navbar end
+//NavbarComponent end
 
 //Welcome section
 
@@ -174,7 +175,7 @@ label, label:after {
 .welcome_message_wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.5rem;
 	text-align: center;
 	align-self: center;
 	justify-content: center;
@@ -182,14 +183,12 @@ label, label:after {
 	font-size: 1.4rem;
 	font-weight: bold;
 	padding: 40px;
-	height: 100vh;
+	height: 120vh;
 	width: 100vw;
 	background: var(--color-opacity);
-	border-radius: 13px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid var(--color-opacity);
+
 }
 
 
@@ -201,15 +200,15 @@ label, label:after {
 	border-radius: 10px;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	margin-top: 1rem;
 	z-index: 99;
 	position: relative;
 }
 
 .buttons:hover {
-	background: #f737f1;
+	background: #dc357d;
 	color: #fffd00;
 	border-color: #fffd00;
 }
@@ -218,55 +217,46 @@ label, label:after {
 //About section
 
 .about_container {
-	height: 88vh;
-	display: flex;
-	background: linear-gradient(90deg, var(--color-primary) 50%, #FFFFFF 50%);
+
+	background-color: var(--color-primary);
+	height: 100vh;
 
 }
 
+.personal_intro_text {
+    margin-top: 7rem;
+	text-align: left;
+	width: 85%;
 
-.profile_picture_section {
-	display: flex;
-	width: 100%;
-	height: auto;
-	z-index: 0;
-	justify-content: flex-end;
-	margin-right: 12rem;
+}
+
+.personal_intro_paragraph {
+	font-size: 1.1rem;
+	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.profile_motto {
+	margin-top: 2rem;
+	font-size: 1.1rem;
+	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 #profile_picture_img {
 	display: flex;
-	margin-top: 6rem;
+	margin-top: 7rem;
 	max-width: 50%;
 	align-self: flex-start;
 	height: auto;
 	z-index: 0;
 }
 
-#personal_intro_text_wrapper {
-	display: flex;
-	position: absolute;
-	align-items: flex-start;
-	justify-content: flex-start;
-	padding: 3rem;
-	flex: 50%;
-}
 
 
-.personal_intro_text {
-	padding: 2rem;
-	text-align: left;
-	width: 45%;
-	margin-top: 2rem;
-}
-
-.personal_intro_paragraph {
-	font-size: 1rem;
-	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-
-}
 
 h2 {
 	font-size: 1.8rem;
@@ -286,7 +276,7 @@ h2 {
 
 //Projects section
 .projects_container_wrapper {
-	background-color: whitesmoke;
+	background-color: ghostwhite;
 }
 #projects_container {
 	position: relative;
@@ -358,12 +348,22 @@ h1 {
 
 // Skills section
 
-.skills {
-	height: 100%;
-	color: var(--color-secondary)
+
+.section_title {
+	padding-left: 1rem;
+
 }
 
+.skills {
+	height: 100%;
+	color: var(--color-secondary);
+	padding: 0rem;
+
+}
+
+
 .skills_text {
+	padding: 2rem;
 	background: -webkit-linear-gradient(var(--color-third), var(--color-secondary));
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -372,6 +372,8 @@ h1 {
 .stack_wraper {
 	display: flex;
 	height: 200px;
+
+
 }
 
 h3 {
@@ -383,11 +385,15 @@ h3 {
 	max-width: 100px;
 }
 
+.stack_icon_resize {
+	max-width: 203.77px;
+}
+
 .skill_icon {
 	max-width: 60px;
 	margin-bottom: 0.5rem;
 }
-//Clouds (Stacks)
+//Skills (Stacks)
 
 .clouds {
 	display: flex;
@@ -409,6 +415,7 @@ h3 {
 	}
 }
 
+
 .skill-box {
 	text-align: center;
 }
@@ -416,7 +423,7 @@ h3 {
 .stack {
 	font-size: 2rem;
 	text-shadow: yellow;
-	padding-top: 3.2rem;
+	padding-top: 6.2rem;
 	text-align: center;
 	background: -webkit-linear-gradient(#d7bfe0, var(--color-secondary));
 	background-clip: text;
@@ -424,8 +431,22 @@ h3 {
 }
 
 .stack_row {
-	margin-top: 2rem;
-	margin-bottom: 3rem;
+	padding-top: 2rem;
+	margin-bottom: 5rem;
+
+}
+
+
+
+.stack_section {
+	/* From https://css.glass */
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 //Footer
@@ -451,6 +472,8 @@ h3 {
 	width: 100%;
 	background: whitesmoke;
 	border-radius: 31px;
+	border-color: whitesmoke;
+	border-width: 1px;
 	font-family: "Open Sans", "sans-serif";
 	font-size: 18px;
 	color: #8f8fa1;
@@ -536,6 +559,14 @@ h3 {
 
 @media only screen and (max-width: 768px) {
 
+	// Nav
+
+	#logo {
+		height: 45px;
+		transition: all .3s ease-in-out;
+		cursor: pointer;
+	}
+
 	//Welcome section
 
 	.moon {
@@ -553,41 +584,48 @@ h3 {
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(18.9px);
 		-webkit-backdrop-filter: blur(18.9px);
-		height: 18rem;
+		height: 20rem;
 		width: 21rem;
+		padding: 3rem 0rem;
 	}
 
 	//About section
 
 	.about_container {
-		height: 95vh;
-		display: flex;
+		height: 110vh;
 		background: var(--color-primary);
 
 	}
 
-	#personal_intro_text_wrapper {
-		display: flex;
-		position: absolute;
-		align-items: flex-start;
-		justify-content: flex-start;
-		padding: 3rem;
-		flex: 50%;
-	}
-
 	.profile_picture_section {
-		display: flex;
-		z-index: 0;
-		justify-content: flex-end;
-		align-self: center;
-		margin-top: 10rem;
+		margin-top: 4rem;
+	}
+
+	.section-title {
+		margin: 0rem;
+		padding-left: 1rem;
+	}
+
+	// Timeline
+
+
+
+
+
+	//Personal Intro
+
+
+	#personal_intro_text_wrapper {
+
+		padding: 3rem;
 
 	}
+
 
 	#profile_picture_img {
 		display: flex;
-		margin-top: 10rem;
-		margin-left: 15rem;
+		margin-top: 2.5rem;
+		margin-left: 2rem;
 		height: auto;
 		align-self: flex-start;
 
@@ -629,9 +667,14 @@ h3 {
 
 	//Skill section
 
-	.section_title {
-		margin-left: 1rem;
+	.stack_section {
+		margin: 1rem;
+		padding: 1rem;
+
 	}
+
+
+
 
 	.stack_wraper {
 		display: block;
@@ -641,8 +684,8 @@ h3 {
 	.skill-box {
 		text-align: center;
 		background-color: var(--color-primary);
-		padding-bottom: 2rem;
 		opacity: 0.9;
+
 	}
 
 
@@ -654,6 +697,9 @@ h3 {
 	.stack_icon {
 		max-width: 63.77px;
 	}
+
+
+
 
 	//Footer section
 
@@ -710,18 +756,47 @@ h3 {
 }
 @media only screen and (min-width: 1824px) {
 	/* Styles */
+
+	//Welcome
+
 	.welcome_message_wrapper {
-		text-align: center;
-		align-self: center;
-		justify-self: center;
+		gap: 2rem;
+		font-size: 2rem;
+	}
+
+	.moon {
+		height:20rem;
+		width:20rem;
+		margin-left:-752px;
+		margin-top:560px;
+	}
+
+	//Skills
+
+	.clouds {
+		height: 80vh;
+	}
+
+	.stack {
+		padding-top: 6.2rem;
+	}
+
+
+
+
+	//Projects section
+
+	.projects_container_wrapper {
+		background-color: ghostwhite;
+		height: 100vh;
 		display: flex;
-		color: white;
-		font-size: 1.6rem;
-		background-color: var(--color-primary);
-		opacity: 0.9;
-		padding: 40px 40px 40px 50px;
-		z-index: 0;
-		height: 20rem;
-		width: 22rem;
+		align-items: center;
+	}
+
+
+	#projects_container {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		height: 70%;
 	}
 }

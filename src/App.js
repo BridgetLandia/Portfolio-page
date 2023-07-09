@@ -1,21 +1,21 @@
 import React from 'react';
-import { Projects } from './components/projects';
-import Header from './components/header';
-import Welcome from './components/welcome';
-import Footer from './components/footer';
-import About from './components/about';
-import Clouds from './components/clouds';
+import { Projects } from './components/Projects';
+import NavbarComponent from './components/NavbarComponent';
+import Welcome from './components/Welcome';
+import Footer from './components/Footer';
+import About from './components/About';
+import Skills from './components/Skills';
 import {ThemeProvider} from "./hooks/useTheme";
 
 function App() {
 	return (
 		<ThemeProvider>
 		<div className="App">
-			<Header />
+			<NavbarComponent  />
 			<Welcome />
-			<About />
+			<Skills />
 			<Projects />
-			<Clouds />
+			<About />
 			<Footer />
 		</div>
 		</ThemeProvider>

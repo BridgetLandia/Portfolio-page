@@ -13,8 +13,9 @@ import AOS from 'aos';
 import bird4 from '../assets/bird4.svg';
 import bird5 from '../assets/bird5.svg';
 import bird6 from '../assets/bird6.svg';
+import tailwind from '../assets/tailwind.png'
 
-export default function Clouds() {
+export default function Skills() {
 	// eslint-disable-next-line
 	const [ ref, setRef ] = useState([]);
 	useEffect(() => {
@@ -27,7 +28,7 @@ export default function Clouds() {
 		<section>
 			<div className="clouds">
 				<Container className="skills">
-					<Row className="section_title">
+					<Row className="section_title mx-0">
 						<h3
 							ref={(ref) => {
 								setRef(ref);
@@ -37,9 +38,10 @@ export default function Clouds() {
 						>
 							Skills
 						</h3>
+
 					</Row>
-					<Row className="d-flex justify-content-between">
-						<Col text="center" className="skill-box">
+					<Row className="d-flex justify-content-between mx-0">
+						<Col sm="4" text="center" className="skill-box mx-0">
 							<img
 								ref={(ref) => {
 									setRef(ref);
@@ -57,7 +59,7 @@ export default function Clouds() {
 								elements for the perfect UX experience.
 							</div>
 						</Col>
-						<Col sm="4" className="skill-box">
+						<Col sm="4" className="skill-box mx-0">
 							<img
 								ref={(ref) => {
 									setRef(ref);
@@ -75,7 +77,7 @@ export default function Clouds() {
 								is a good way to engage your audience.
 							</div>
 						</Col>
-						<Col sm="4" className="skill-box">
+						<Col sm="4" className="skill-box mx-0">
 							<img
 								ref={(ref) => {
 									setRef(ref);
@@ -94,7 +96,8 @@ export default function Clouds() {
 							</div>
 						</Col>
 					</Row>
-					<Row className="section_title">
+
+					<Row className="section_title mx-0">
 						<h3
 							ref={(ref) => {
 								setRef(ref);
@@ -105,41 +108,41 @@ export default function Clouds() {
 							Stacks
 						</h3>
 					</Row>
-
+					<section className="stack_section">
 					<Row className="stack_row">
 						<Col>
-							{' '}
 							<img className="stack_icon" src={react} alt="React logo" />
 						</Col>
 						<Col>
-							{' '}
 							<img className="stack_icon" src={htmlicon} alt="Html icon" />
 						</Col>
 						<Col>
 							<img className="stack_icon" src={booticon} alt="Bootstrap icon" />
 						</Col>
 						<Col>
-							{' '}
 							<img className="stack_icon" src={cssicon} alt="Css icon" />
 						</Col>
 					</Row>
 					<Row className="stack_row">
 						<Col>
-							{' '}
 							<img className="stack_icon" src={mongodb} alt="React logo" />
 						</Col>
 						<Col>
-							{' '}
 							<img className="stack_icon" src={vuetify} alt="Html icon" />
 						</Col>
 						<Col>
 							<img className="stack_icon" src={vuejs} alt="Bootstrap icon" />
 						</Col>
 						<Col>
-							{' '}
 							<img className="stack_icon" src={nodejs} alt="Css icon" />
 						</Col>
 					</Row>
+					<Row className="stack_row">
+						<Col>
+							<img  className="stack_icon_resize" src={tailwind} alt="React logo" />
+						</Col>
+					</Row>
+					</section>
 				</Container>
 			</div>
 		</section>

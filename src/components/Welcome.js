@@ -45,7 +45,7 @@ export default function Welcome() {
 								}}
 								data-aos="fade-right"
 							>
-								I'm Brigitta, a web developer<br/> with a keen eye for UI/UX design.
+								I'm Brigitta,<br/> a web developer<br/> with a keen eye for UI/UX design.
 							</div>
 						<Link to="projects_container" smooth={true} offset={-100} duration={500}>
 							<button className="buttons">View My Work</button>

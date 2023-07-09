@@ -16,7 +16,7 @@ import {
 export const Projects = (props) => {
 	return (
 		<div className="projects_container_wrapper">
-			<Container fluid="md" id="projects_container">
+			<Container id="projects_container">
 				<Row className="my_projects_title">
 					<div>
 						<h1>My projects</h1>
@@ -123,28 +123,28 @@ export const Projects = (props) => {
 								</Button>
 							</CardBody>
 						</Card>
-						<Card className="projects">
-							<CardImg
-								top
-								width="100%"
-								src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674911/bridgetlandia/sutimama_vwregy.png"
-							/>
-							<CardBody>
-								<CardTitle className="project_title">Knit and Bake</CardTitle>
-								<CardSubtitle className="project_subtitle">Made with React, React-router</CardSubtitle>
-								<CardText>Small business website with a shop section.</CardText>
-								<Button className="buttons">
-									<a
-										className="project_links"
-										href="https://github.com/BridgetLandia/Knit-Style"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										GitHub
-									</a>
-								</Button>
-							</CardBody>
-						</Card>
+						{/*<Card className="projects">*/}
+						{/*	<CardImg*/}
+						{/*		top*/}
+						{/*		width="100%"*/}
+						{/*		src="https://res.cloudinary.com/dfjaln3y4/image/upload/v1595674911/bridgetlandia/sutimama_vwregy.png"*/}
+						{/*	/>*/}
+						{/*	<CardBody>*/}
+						{/*		<CardTitle className="project_title">Knit and Bake</CardTitle>*/}
+						{/*		<CardSubtitle className="project_subtitle">Made with React, React-router</CardSubtitle>*/}
+						{/*		<CardText>Small business website with a shop section.</CardText>*/}
+						{/*		<Button className="buttons">*/}
+						{/*			<a*/}
+						{/*				className="project_links"*/}
+						{/*				href="https://github.com/BridgetLandia/Knit-Style"*/}
+						{/*				target="_blank"*/}
+						{/*				rel="noopener noreferrer"*/}
+						{/*			>*/}
+						{/*				GitHub*/}
+						{/*			</a>*/}
+						{/*		</Button>*/}
+						{/*	</CardBody>*/}
+						{/*</Card>*/}
 					</CardDeck>
 				</Row>
 			</Container>
