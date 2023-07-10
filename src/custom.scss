@@ -386,7 +386,7 @@ h3 {
 }
 
 .stack_icon_resize {
-	max-width: 203.77px;
+	max-width: 103.77px;
 }
 
 .skill_icon {
@@ -567,6 +567,12 @@ h3 {
 		cursor: pointer;
 	}
 
+
+
+	.navbar-nav {
+		align-items: center;
+	}
+
 	//Welcome section
 
 	.moon {
@@ -584,7 +590,7 @@ h3 {
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(18.9px);
 		-webkit-backdrop-filter: blur(18.9px);
-		height: 20rem;
+		height: 23rem;
 		width: 21rem;
 		padding: 3rem 0rem;
 	}
@@ -670,10 +676,13 @@ h3 {
 	.stack_section {
 		margin: 1rem;
 		padding: 1rem;
-
 	}
 
+	.stack_row {
+ 		margin-bottom: 0rem;
+		margin-top: 0px;
 
+	}
 
 
 	.stack_wraper {
@@ -688,10 +697,6 @@ h3 {
 
 	}
 
-
-	.stack_row {
-		margin-top: 0px;
-	}
 
 
 	.stack_icon {
